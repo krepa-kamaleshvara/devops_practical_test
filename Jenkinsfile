@@ -9,12 +9,14 @@ pipeline {
     stages {                                                                                                                                                                                                
         stage('Checkout') {                                                                                                                                                                                 
             steps {                                                                                                                                                                                         
-                git branch: 'main', url: 'https://github.com/krepa-kamaleshvara/devops_practical_test'                                                                                                                            devops_practical_test'                                                                                                                                                                                      
+                git branch: 'main', url: 'https://github.com/krepa-kamaleshvara/devops_practical_test'
+               
             }                                                                                                                                                                                               
         }                                                                                                                                                                                                   
         stage('Build') {                                                                                                                                                                                    
             steps {                                                                                                                                                                                         
-                sh './mvnw compile quarkus:dev'                                                                                                                                                             
+                sh './mvnw compile quarkus:dev'
+                
             }                                                                                                                                                                                               
         }                                                                                                                                                                                                   
         stage('Package') {                                                                                                                                                                                  
